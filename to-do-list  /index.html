@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-list</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="all-wrap">
+      <div class="container-box">
+        <div class="header-box">
+          <h2>안녕하세요, FlowDash님</h2>
+          <p>2026 1월 22일</p>
+        </div>
+
+        <section class="dashboard-summary">
+          <div class="summary-card">
+            <p>Total Tasks</p>
+            <h2>2</h2>
+          </div>
+
+          <div class="summary-card">
+            <p>To do</p>
+            <h2>0</h2>
+          </div>
+
+          <div class="summary-card">
+            <p>In Progress</p>
+            <h2>1</h2>
+          </div>
+
+          <div class="summary-card">
+            <p>Done</p>
+            <h2>1</h2>
+          </div>
+
+          <div class="summary-card">
+            <p>Achievement</p>
+            <h2>50%</h2>
+          </div>
+        </section>
+
+        <section class="filter-container">
+          <div class="filter-bar">
+            <input class="search-input field" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </div>
+
+          <div class="choice-box">
+            <select name="choice">
+              <option value="선택하세요"></option>
+              <option value="할일"></option>
+              <option value="진행"></option>
+              <option value="완료"></option>
+            </select>
+
+            <div class="sort-container">
+              <button type="button">정렬: 오름차순 ↑</button>
+            </div>
+
+            <button class="new-btn" type="button">+ 새할일</button>
+          </div>
+        </section>
+        <!--filter-container end-->
+
+        <div class="sort-container2">
+          <button class="sort-btn" type="button">정렬:오름차순</button>
+        </div>
+      </div>
+
+      <main class="dashboard-container">
+        <section class="is-to-do to-do-card">
+          <h2>할 일<span>0</span></h2>
+
+          <div class="task-list-section">
+            <p>할 일이 없습니다</p>
+          </div>
+        </section>
+
+        <section class="is-doing to-do-card">
+          <h2>진행 중 <span>1</span></h2>
+
+          <div class="doing-section">
+            <div class="task-card">
+              <span>중간</span>
+              <h3>할일 예시</h3>
+              <p>할 일 내용 입니다</p>
+              <div class="date-card">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-calendar-date-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zm5.402 9.746c.625 0 1.184-.484 1.184-1.18 0-.832-.527-1.23-1.16-1.23-.586 0-1.168.387-1.168 1.21 0 .817.543 1.2 1.144 1.2"
+                  />
+                  <path
+                    d="M16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-6.664-1.21c-1.11 0-1.656-.767-1.703-1.407h.683c.043.37.387.82 1.051.82.844 0 1.301-.848 1.305-2.164h-.027c-.153.414-.637.79-1.383.79-.852 0-1.676-.61-1.676-1.77 0-1.137.871-1.809 1.797-1.809 1.172 0 1.953.734 1.953 2.668 0 1.805-.742 2.871-2 2.871zm-2.89-5.435v5.332H5.77V8.079h-.012c-.29.156-.883.52-1.258.777V8.16a13 13 0 0 1 1.313-.805h.632z"
+                  />
+                </svg>
+                <span>2026.01.22 01.08</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="To-do-done to-do-card">
+          <h2>완료 <span>1</span></h2>
+          <div class="task-card2">
+            <span>높음</span>
+            <h3>할 일 완료 예시</h3>
+            <p>완료된 아이템 예시 입니다</p>
+            <div class="date-card2">
+              <div class="date-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-calendar-date-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zm5.402 9.746c.625 0 1.184-.484 1.184-1.18 0-.832-.527-1.23-1.16-1.23-.586 0-1.168.387-1.168 1.21 0 .817.543 1.2 1.144 1.2"
+                  />
+                  <path
+                    d="M16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-6.664-1.21c-1.11 0-1.656-.767-1.703-1.407h.683c.043.37.387.82 1.051.82.844 0 1.301-.848 1.305-2.164h-.027c-.153.414-.637.79-1.383.79-.852 0-1.676-.61-1.676-1.77 0-1.137.871-1.809 1.797-1.809 1.172 0 1.953.734 1.953 2.668 0 1.805-.742 2.871-2 2.871zm-2.89-5.435v5.332H5.77V8.079h-.012c-.29.156-.883.52-1.258.777V8.16a13 13 0 0 1 1.313-.805h.632z"
+                  />
+                </svg>
+                <span>2026. 01.22. 01.09</span>
+              </div>
+
+              <div class="check-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-calendar-check-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"
+                  />
+                </svg>
+                <span>2026. 01 22. 01.09</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2026 FlowDash.All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
