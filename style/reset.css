@@ -1,9 +1,8 @@
 *,
 *::before,
 *::after {
-    box-sizing:border-box;
+  box-sizing: border-box;
 }
-
 
 html,
 body,
@@ -24,6 +23,8 @@ li,
 form,
 fieldset,
 label,
+label,
+label,
 legend,
 input,
 textarea,
@@ -43,26 +44,26 @@ header,
 main,
 nav,
 footer {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font-family: Noto Sans Arabic;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: Noto Sans Arabic;
 }
 
 html {
-    min-height: 100dvh;
-    min-height: 100dvh;
-    background-color: #ffff;
+  min-height: 100dvh;
+  min-height: 100dvh;
+  background-color: #ffff;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color:inherit;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }

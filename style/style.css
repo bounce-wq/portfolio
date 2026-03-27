@@ -1,68 +1,374 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.container-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  overflow: hidden;
+  margin-top: 30px;
+  background-color: #e6ecff;
+}
+.header-box {
+  display: flex;
+  position: relative;
+  margin-bottom: 12px;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.header-section {
+  width: 300px;
+  flex: 0.5;
   line-height: 1.6;
 }
-.container-box {
-  width: 100%;
-  padding: 15px;
+
+.name-front {
+  font-size: 25px;
 }
 
-.container-wrap {
-  width: 100%;
-  max-width: 375px;
-  background-color: #e6ecff;
-  margin: 0 auto;
-  padding: 20px;
-  /*overflow: hidden;*/
+.about-section > h2 {
+  font-size: 20px;
 }
 
-.svg-img {
+.left-svg {
   width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.svg-img > svg {
+  left: -63px;
+  top: -40px;
   position: absolute;
+  z-index: 3;
 }
 
-.svg-img > svg:nth-child(1) {
-  left: 0;
-  top: 0;
+li {
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 15px;
+}
+
+.right-blue-icon {
+  position: absolute;
+  right: -50px;
+  top: -39px;
+}
+
+.bottom-icon {
+  position: absolute;
+  z-index: 8;
+  bottom: -20%;
+
+  left: -60px;
+}
+.sky-icon {
+  display: none;
+}
+
+.bottom-blue-icon {
+  position: absolute;
+  bottom: -10%;
+  right: -60px;
+}
+
+.profile-img {
+  height: auto;
+  position: relative;
   z-index: 1;
 }
 
-.svg-img > svg:nth-child(2) {
+.profile-img > img {
+  width: 120px;
+}
+.cat-img > img {
+  width: 250px;
+}
+
+.about-img {
+  display: flex;
+  position: relative;
+  padding-left: 108px;
+  line-height: 1.6;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /*plus*/
+}
+.cat-img {
+  position: relative;
+  flex-shrink: 0;
   right: 0;
-  top: 0;
-  z-index: 1;
+  bottom: 0; /*plus*/
 }
 
-.profile-image-area > img {
-  width: 70%;
+.about-section {
+  flex: 0.6; /*plus*/
+
+  margin: 12px;
+  padding: 11px 10px;
+  z-index: 2;
 }
 
-.portfolio-header {
+li > h2 {
+  font-size: 25px;
+}
+
+.skill-section > li {
+  gap: 0;
+  justify-content: space-between;
+}
+
+.resume-section {
+  display: flex;
+
+  padding-left: 11px;
+
+  gap: 10px;
+}
+
+.footer-wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-}
-
-.header-text {
-  z-index: 2;
-  font-display: flex;
-  align-items: center;
-}
-
-.text-Frontend {
-  text-align: left;
   line-height: 1.6;
+  width: 70%;
+  margin: 0 auto;
+  gap: 12px;
+  padding: 15px 10px;
+}
+.Experience > h2 {
+  font-size: 20px;
 }
 
-.header-text h1 {
-  font-size: 14px;
-  font-weight: bold;
+.EUDCATION > h2 {
+  font-size: 20px;
+}
+
+.CERTIFICATE > h2 {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 834px) {
+  .header-box {
+    flex-wrap: wrap;
+    position: relative;
+    align-items: flex-start;
+  }
+  .profile-img {
+    flex: 0.3;
+  }
+
+  .header-section {
+    padding-right: 140px;
+    flex: 0.6;
+  }
+
+  .resume-section {
+    flex: 1;
+  }
+  .contact-section {
+    width: auto;
+  }
+  .about-img {
+    /*plus*/
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0;
+    flex: 1;
+    position: static;
+  }
+  .about-section {
+    width: 100%;
+    margin: 12px 0;
+    padding: 0;
+  }
+
+  .cat-img {
+    /*plus*/
+    position: absolute;
+    top: -2%;
+    right: -50px;
+    order: unset;
+    align-self: baseline;
+    margin-top: -20px;
+  }
+
+  .Experience {
+    /*padding: 20px 0px;
+    margin: 15px 10px;*/
+    width: 100%;
+  }
+
+  .EUDCATION {
+    width: 100%;
+    /*padding: 15px 0;
+    margin: 30px 0;*/
+  }
+
+  .CERTIFICATE {
+    width: 100%;
+    /*padding: 20px 0;
+    margin: 30px 0;*/
+    line-height: 1.6;
+  }
+  .sky-icon {
+    display: none;
+  }
+  .footer-wrap {
+    padding: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  .container-wrap {
+    /*없으면 만들어서 쓰면됩니당!*/
+    padding: 12px 12px;
+  }
+
+  .header-box {
+    display: flex; /*일단 최상위에 플랙스 먹이고
+    줄바꿈되게 하고 얼라잇 아이템 스타트로 왼쪽에서 시작해라 
+    지정해두고!지금 스킨부터 이메일 하나 어바웃미 크게 감싸주는애
+    하나 이렇게 되있죠?네 둘이 최상위부모라서 안에서만
+    오더 속성이 먹혀요! 그쵸? 네 그럼 마음대로 순서를못바꾸니
+    부모감싸진거 상관없어져라! 하는걸 넣을거에요*/
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .resume-section,
+  .about-img {
+    display: contents; /*이게 부모상관없이 배치할수있게
+    해주는 애! 그럼 부모가 상관없어졌으니 차례대로 
+    순서주면되요 어떤걸로? 오더 그쵸! 그럼 맨처음애부터 차례대로
+    1,2,3,4,5,6 요렇게 줄꺼에요 다른애들 오더 안줘서 
+    맨아래로 가버렸어요! 그럼 다른애들도 차근차근 2,3,4
+    줘보줘!*/
+  }
+  .profile-img {
+    order: 1;
+    width: 40%;
+    flex: none;
+    margin: 0;
+  }
+
+  .header-section {
+    order: 2;
+    width: 55%;
+
+    font-size: 12px;
+    flex: none;
+    padding: 0 0 0 15px;
+    margin: 15px 0;
+  }
+
+  .header-section h2,
+  h3 {
+    font-size: 16px;
+  }
+  .about-section {
+    order: 3;
+    width: 100%;
+    flex: none;
+    padding: 20px 0;
+    font-size: 13px;
+    margin-top: 15px;
+  }
+
+  .about-section h2 {
+    font-size: 16px;
+  }
+
+  .skill-section {
+    order: 4;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    font-size: 13px;
+    padding: 0 15px;
+  }
+
+  .skill-section > li:first-child {
+    position: absolute;
+
+    top: -48%;
+    left: -13px;
+  }
+  .skill-section > li {
+    padding: 0 5px;
+
+    margin: 10px 6px;
+  }
+  .skill-section h2 {
+    font-size: 16px;
+  }
+
+  .contact-section {
+    order: 5;
+    width: 60%;
+    font-size: 13px;
+
+    padding: 15px 0;
+  }
+  .contact-section h2 {
+    font-size: 16px;
+  }
+
+  .contact-section > li {
+    padding: 5px 2px;
+    margin: 0;
+  }
+
+  .resume-section {
+    flex-direction: row;
+    flex: none;
+  }
+
+  .cat-img {
+    order: 6;
+    position: static;
+    width: 30%;
+    padding-top: 50px;
+  }
+  .cat-img > img {
+    width: 150px;
+  }
+
+  .bottom-icon {
+    display: none;
+  }
+
+  .right-blue-icon {
+    position: absolute;
+    top: -50px;
+    right: -30px;
+  }
+
+  .bottom-blue-icon {
+    position: absolute;
+    bottom: -25px;
+    right: -20px;
+  }
+
+  .sky-icon {
+    display: block;
+    position: relative;
+    top: -18px;
+    left: -40px;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px 30px;
+    font-size: 13px;
+  }
+
+  .Experience h2 {
+    font-size: 15px;
+  }
+  .EUDCATION h2 {
+    font-size: 15px;
+  }
+  .CERTIFICATE h2 {
+    font-size: 15px;
+  }
 }
